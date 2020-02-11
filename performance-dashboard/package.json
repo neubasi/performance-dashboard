@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
-    "os-utils": "0.0.14"
+    "os-utils": "0.0.14",
+    "ws": "^7.2.1"
   }
 }
