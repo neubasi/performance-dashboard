@@ -1,10 +1,10 @@
 const os = require('os');
 const utils = require('os-utils');
 const WebSocket = require('ws')
-const wss = new WebSocket.Server({ port: 5000 })
+
+const wss = new WebSocket.Server({ port: 5000 });
 
 const data = {};
-const cpu = '0';
 
 console.log('OS Typ: ', os.type())
 console.log('CPU Architektur: ', os.arch)
