@@ -2,7 +2,7 @@ const os = require('os');
 const utils = require('os-utils');
 const WebSocket = require('ws')
 
-const wss = new WebSocket.Server({ host: '10.0.0.2', port: 5000 });
+const wss = new WebSocket.Server({ host: '127.0.0.1', port: 5000 });
 //const wss = new WebSocket({host:'ws://localhost', port:5000});
 
 const data = {};
