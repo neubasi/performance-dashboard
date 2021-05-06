@@ -1,8 +1,18 @@
 const os = require('os');
 const utils = require('os-utils');
-const WebSocket = require('ws')
+const WebSocket = require('ws');
+const fs = require('fs');
+const https = require('https');
 
-const wss = new WebSocket.Server({ host: '78.47.103.10', port: 5001 });
+
+const server = https.createServer({
+  cert: fs.readFileSync('/etc/letsencrypt/live/hy1dra.com/cert.pem', 'utf8'),
+  key: fs.readFileSync('/etc/letsencrypt/live/hy1dra.com/privkey.pem', 'utf8')
+});
+const wss = new WebSocket.Server({ server });
+
+
+//const wss = new WebSocket.Server({ host: '78.47.103.10', port: 5001 });
 //const wss = new WebSocket({host:'ws://localhost', port:5000});
 
 const data = {};
@@ -37,4 +47,6 @@ wss.on('connection', ws => {
   
   
 })
+
+server.listen(5001);
 
