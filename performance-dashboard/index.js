@@ -6,7 +6,7 @@ const https = require('https');
 
 
 const server = https.createServer({
-  host: 'wss://78.47.103.10',
+  host: 'wss://78.47.103.10:5001',
   cert: fs.readFileSync('/etc/letsencrypt/live/hy1dra.com/cert.pem', 'utf8'),
   key: fs.readFileSync('/etc/letsencrypt/live/hy1dra.com/privkey.pem', 'utf8')
 });
@@ -49,5 +49,5 @@ wss.on('connection', ws => {
   
 })
 
-server.listen(5001);
+//server.listen(5001);
 
