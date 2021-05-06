@@ -6,8 +6,6 @@ const https = require('https');
 
 
 const server = https.createServer({
-  host: '78.47.103.10',
-  port: 5001,
   cert: fs.readFileSync('/etc/letsencrypt/live/hy1dra.com/cert.pem', 'utf8'),
   key: fs.readFileSync('/etc/letsencrypt/live/hy1dra.com/privkey.pem', 'utf8')
 });
